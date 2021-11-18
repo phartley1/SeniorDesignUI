@@ -5,7 +5,6 @@ import { StyleSheet, Text, View, Button, TouchableOpacity, Alert } from 'react-n
 import { arc } from 'd3';
 import ReactDOM from 'react-dom';
 import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
 import Popup from './components/Popup';
 
 const width = 960;
@@ -23,6 +22,8 @@ function handlemouseenter(e) {
 
 export default function App() {
   const [buttonPopup, setButtonPopup] = useState(false);
+  const [buttonPopup2, setButtonPopup2] = useState(false);
+  const [buttonPopup3, setButtonPopup3] = useState(false);
   
   return (
     <View style={styles.container}>
@@ -43,21 +44,47 @@ export default function App() {
         title= "boiler" 
         onPress={() => setButtonPopup(true)}
       />
+      <Button 
+        title= "Turbine/Generator" 
+        onPress={() => setButtonPopup2(true)}
+      />
+      <Button 
+        title= "Condenser" 
+        onPress={() => setButtonPopup3(true)}
+      />
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
         <h3>BOILER</h3>
         <p>The boiler is the component of the power plant where the biomass is converted into heat energy. 
-          Biomass is put inside the boiler where it is burned, which releases energy stored in the biomass in the form of heat. This heat is used to convert liquid water into superheated steam, which is then directed towards the turbine.
-          Another product of burning fuel is exhaust gas, including carbon dioxide, methane, and nitrous oxide. In a normal power plant, this exhaust would just be released into the atmosphere. In the Stored Solar bio-hub, this gas would be diverted to other co-hosts where the gas can be utilized (ex. greenhouses)</p>
+          Biomass is put inside the boiler where it is burned, which releases energy stored in the biomass 
+          in the form of heat. This heat is used to convert liquid water into superheated steam, which is then directed towards the turbine.
+          Another product of burning fuel is exhaust gas, including carbon dioxide, methane, and nitrous oxide. 
+          In a normal power plant, this exhaust would just be released into the atmosphere. In the Stored Solar bio-hub, 
+          this gas would be diverted to other co-hosts where the gas can be utilized (ex. greenhouses)</p>
       </Popup>
 
-      <Button 
-        title= "Turbine/Generator" 
-        onPress={() => setButtonPopup(true)}
-      />
-      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+      <Popup trigger={buttonPopup2} setTrigger={setButtonPopup2}>
         <h3>TURBINE/GENERATOR</h3>
-        <p>The turbine is where heat energy is converted into mechanical energy, and the generator converts this heat energy into mechanical energy",
-            A rotating magnetic field and coil of wire creates a current in the generator creating electrical power. The electrical energy created is about 30% of the total energy stored in the biomass. The rest of the energy is lost in the exhaust, heating of the pipes, and in the turbine.</p>
+        <p>The turbine is where heat energy is converted into mechanical energy, and the generator converts this 
+          heat energy into mechanical energy. A rotating magnetic field and coil of wire creates a current in the 
+          generator creating electrical power. The electrical energy created is about 30% of the total energy stored in the biomass. 
+          The rest of the energy is lost in the exhaust, heating of the pipes, and in the turbine.</p>
+      </Popup>
+
+      <Popup trigger={buttonPopup3} setTrigger={setButtonPopup3}>
+        <a href="https://www.google.com/search?q=boilers&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiPlKe0maL0AhWOhXIEHbZHBdsQ_AUoAnoECAMQBA&biw=683&bih=668&dpr=1.3" target="_blank">
+                    <button>Go!</button>
+        </a>
+        <h3>CONDENSER</h3>
+        <p>In a normal power plant, the condenser's main purpose is to convert is the steam leaving the turbine into liquid water 
+          that is then cycled back to the boiler for the loop to repeat the cycle. As a result of a low efficiency of the turbine, 
+          there is a significant amount of excess hear that leaves the condenser, which can be diverted to the aquaculture industry 
+          to maintain temperature levels in order to, as an example, cultivate shrimp in the New England area.
+          Much of the excess heat can be diverted to various areas around the power plant to allow for more efficient heat transfer 
+          and maintaining the longevity of equipment. As an example, heat can be diverted in order to create superheated steam without much moisture, 
+          which can cause corrosion in pipes. Moreover, during the winter, it's critical the pipes do not create too large of a temperature 
+          differential or the pipes will freeze. Likewise, during the summer, the temperature differential must be large enough to allow 
+          for proper heat transfer around the system. Diverting heat from the condenser allows the power plant to operate better while 
+          also playing an active role in helping local industries.</p>
       </Popup>
 
     </View>
