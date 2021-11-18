@@ -73,6 +73,7 @@ export default function App() {
           Another product of burning fuel is exhaust gas, including carbon dioxide, methane, and nitrous oxide. 
           In a normal power plant, this exhaust would just be released into the atmosphere. In the Stored Solar bio-hub, 
           this gas would be diverted to other co-hosts where the gas can be utilized (ex. greenhouses)</p>
+	<img src="https://www.chardonlabs.com/wp-content/uploads/2015/11/Water-Treatment-Steam-Boiler-749x372-1280x720.jpeg" alt="Boiler schematic" width="640" height="360" />
       </Popup>
 
       <Popup trigger={buttonPopup2} setTrigger={setButtonPopup2}>
@@ -84,6 +85,7 @@ export default function App() {
           heat energy into mechanical energy. A rotating magnetic field and coil of wire creates a current in the 
           generator creating electrical power. The electrical energy created is about 30% of the total energy stored in the biomass. 
           The rest of the energy is lost in the exhaust, heating of the pipes, and in the turbine.</p>
+	<img src="https://energyeducation.ca/wiki/images/thumb/3/3d/Natgasturb.png/780px-Natgasturb.png" alt="Turbine schematic" width="585" height="206"/>
       </Popup>
 
       <Popup trigger={buttonPopup3} setTrigger={setButtonPopup3}>
@@ -101,6 +103,7 @@ export default function App() {
           differential or the pipes will freeze. Likewise, during the summer, the temperature differential must be large enough to allow 
           for proper heat transfer around the system. Diverting heat from the condenser allows the power plant to operate better while 
           also playing an active role in helping local industries.</p>
+	<img src="https://www.powermag.com/wp-content/uploads/2012/09/520004de06da1-090112_EPRI_Fig1.jpeg" alt="Condenser schematic" />
       </Popup>
 
       <Popup trigger={buttonPopup4} setTrigger={setButtonPopup4}>
@@ -113,6 +116,7 @@ export default function App() {
           for slower and less efficient burning in the boiler, so heat is diverted from the boiler in order
            to dry the wood of this moisture. Even this simple process leads to an increase in efficiency of 
            the whole system by about 4%.</p>
+	<img src="https://www.redalyc.org/journal/485/48562088010/0718-221X-maderas-00410-gf2.jpg" alt="Dryer schematic" />
       </Popup>
 
       <Popup trigger={buttonPopup5} setTrigger={setButtonPopup5}>
@@ -125,6 +129,7 @@ export default function App() {
           exported in the form of GAC and PAC (creating a revenue stream for the community), or buried 
           back into the ground. As a result, the short-cycle carbon that is stored in plants is converted 
           into long-term carbon that will take thousands of years creating a carbon-negative process.</p>
+	<img src="https://www.intechopen.com/media/chapter/57695/media/F1.png" alt="Gasifier schematic" class="center"/>
       </Popup>
 
     </View>
